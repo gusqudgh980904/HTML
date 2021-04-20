@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>0420숙제</title>
+</head>
+<body>
+
+<label>*아이디</label>
+<input type="text" name="id" placeholder="필수입력" autofocus="autofocus" >
+<label></label>
+<input type="button" value="중복확인"><br/>
+<label>*비밀번호</label>
+<input type="password" name="password" placeholder="필수입력"><br/>
+<label>*비밀번호 확인</label>
+<input type="password" name="password" placeholder="비밀번호 확인"><br/>
+<label>*이름</label>
+<input type="text" name="name" placeholder="필수입력"><br/>
+<label>*주민번호</label>
+<input type="text" name="ssn" placeholder="필수입력" maxlength="6" size="5">ㅡ
+<input type="password" name="ssn" placeholder="필수입력" maxlength="7" size="6"><br/>
+<label>*성별</label>
+<input type="radio" name="gender" value="M" checked="checked">남자
+<input type="radio" name="gender" value="F" >여자<br/>
+<label>*생년월일</label>
+<input type="text" name="birth" placeholder="필수입력" maxlength="8" size="7">ㅡ
+<input type="text" name="birth" placeholder="필수입력" maxlength="2" size="3">ㅡ
+<input type="text" name="birth" placeholder="필수입력" maxlength="2" size="3"><br/>
+<label>*우편번호</label>
+<input type="text" name="zipcode" placeholder="필수입력" maxlength="6" size="5">
+<label></label>
+<input type="button" value="우편번호찾기"><br/>
+<label>*주소</label>
+<input type="text" name="addr" placeholder="필수입력"><br/>
+<label>*상세주소</label>
+<input type="text" name="addr" placeholder="필수입력"><br/>
+<label>이메일</label>
+<input type="email" name="email"/>@
+<select name="domain" size="1">
+	<option value="none" selected="selected">직접입력</option>              
+	<option value="daum.net">daum.net</option>
+	<option value="sist.co.kr">sist.co.kr</option>
+	<option value="gmail.com">gmail.com</option>
+	<option value="naver.com">naver.com</option>
+</select>
+<label></label>
+<input type="text" name="email"><br/>
+<label>관심언어</label>
+	<input type="checkbox" name="c" value="자바" >자바
+	<input type="checkbox" name="c" value="HTML" >HTML
+	<input type="checkbox" name="c" value="Visual Basic" >Visual Basic<br/>
+	<input type="checkbox" name="c" value="C/c++">C/c++
+	<input type="checkbox" name="c" value="Python">Python
+	<input type="checkbox" name="c" value="ASP">ASP<br/>
+<label>가입인사</label><br/>	
+<textarea name="ta" rows="5" cols="50" placeholder="가입인사를 적어주세요"></textarea><br/>
+<label></label>
+<input type="submit" value="가입">
+<label></label>
+<input type="reset" value="초기화"><br/>
+</body>
+</html>
