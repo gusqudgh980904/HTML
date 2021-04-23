@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>layout</title>
+<link rel="stylesheet" type="text/css" href="http://211.63.89.149/html_prj/common/css/main.css"/>
+<style type="text/css">
+#wrap{width:800px;height:900px;margin:0px auto}
+#header{width:800px;height:100px;}
+#container{width:800px;height:700px;}
+#footer{width:800px;height:100px;}
+
+#wrap1{ width:900px;height:800px}
+#rel{position: relative;}
+#div1{position: absolute;top: 10px;width:400px;height:100px; background-color: #FF0000;}
+#div2{position: absolute;top: 10px; left: 410px; width:120px;height:200px; background-color: #00FF00}
+#div3{position: absolute;top: 120px; width:140px;height:200px; background-color: #0000FF}
+#div4{position: absolute;top: 120px; left: 150px; width:250px;height:100px; background-color: #dfdfdf}
+#div5{position: absolute;top: 225px; left: 150px; width:400px;height:100px; background-color: #E61CE6}
+</style>
+</head>
+<body>
+
+<div id="wrap">
+<!-- wrap:800(w)x900(h) -->
+<div id="header">header:800(w)x100(h)</div>
+<div id="container">container:800(w)x700(h)</div>
+<div id="footer">footer:800(w)x100(h)</div>
+
+</div>
+
+<br/>
+<hr/>
+
+<div id="wrap1">
+<div id="rel">
+<div id="div1">div1</div>
+<div id="div2">div2</div>
+<div id="div3">div3</div>
+<div id="div4">div4</div>
+<div id="div5">div5</div>
+</div>
+</div>
+
+
+</body>
+</html>
