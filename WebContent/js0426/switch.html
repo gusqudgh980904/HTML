@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>switch</title>
+<link rel="stylesheet" type="text/css" href="http://211.63.89.149/html_prj/common/css/main.css"/>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+/* 1조	이하늘	이학민	진재혁	한상민(조)	이상철
+2조	곽범수	박기범(조)	조혜원	권예원	석지원 
+3조	조영래	유경우	현병호	김다은	이예림(조)
+4조	강인섭	정은아	송준희	김덕영(조)	 */
+
+var group=prompt("조입력","1");
+var names="";
+switch(group){
+case "1":names="이하늘	이학민	진재혁	한상민(조)	이상철";break;
+case "2":names="곽범수	박기범(조)	조혜원	권예원	석지원 ";break;
+case "3":names="조영래	유경우	현병호	김다은	이예림(조)";break;
+case "4":names="강인섭	정은아	송준희	김덕영(조)";break;
+default:names="해당조는 존재하지 않습니다";
+}//switch
+document.write(group+"조의 조원:"+names);
+
+//혈액형을 입력받아 혈액형별 특징을 이미지로 출력
+var bc=prompt("혈액형을 입력해주세요","O");
+var output="";
+switch(bc){
+case "A":output="images/blood_a.png";break;
+case "B":output="images/blood_b.png";break;
+case "O":output="images/blood_o.png";break;
+case "AB":output="images/blood_ab.png";break;
+default:output="../common/images/포챠코1.jpg";
+}//switch
+
+document.write("<div><img src='"+output+"'/></div>");
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

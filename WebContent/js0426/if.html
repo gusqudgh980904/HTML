@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>if</title>
+<link rel="stylesheet" type="text/css" href="http://211.63.89.149/html_prj/common/css/main.css"/>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+var name=prompt("이름을 입력해주세요","홍길동");
+var age=prompt("나이를 입력해주세요","19")
+var score=prompt("점수입력",50);
+//입력된 이름이 '송준희'일 때만 글자를 흘려보내기
+if(name=="송준희"){
+document.write("<marquee scrollamount=50>"+name+"</marquee><br/>");
+}else{
+document.write(name+"<br/>");	
+}//else
+	
+//나이를 입력받아서 19세 이상이면 이미지1을 출력하고 그렇지 않으면 이미지2를 출력
+if(age>18){
+document.write("<img src=http://localhost/html_prj/common/images/%ED%86%B0%ED%95%98%EB%94%94.jpg/>");	
+}else{
+document.write("<img src=http://localhost/html_prj/common/images/%ED%8F%AC%EC%B1%A0%EC%BD%941.jpg/>");	
+}//else
+	
+if(score<0){
+document.write("점수는 0점 미만일 수 없습니다")	
+}else if(score>100){
+document.write("점수는 100점 초과일 수 없습니다")	
+}else{
+document.write(score+"점")	
+}//else if
+</script>
+</head>
+<body>
+
+</body>
+</html>
