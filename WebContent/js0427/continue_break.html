@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>continue_break</title>
+<link rel="stylesheet" type="text/css" href="http://211.63.89.149/html_prj/common/css/main.css"/>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+//continue:반복문의 실행횟수를 건너 뛸 대
+//1~50까지 홀수의 합 구하기
+var total=0;
+for(var i=1;i<51;i++){
+	if(i%2==0){//짝수인 경우 반복문의 수행을 건너뛰고,증.감소식으로 이동
+		continue;
+	}//if
+	total+=i;
+}//for
+document.write("1~50까지의 합:"+total)
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

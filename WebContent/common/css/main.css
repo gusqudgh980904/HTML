@@ -11,6 +11,10 @@ fieldset, img {
 	border: 0 none;
 }
 
+hr{
+	display:none
+}
+
 dl, ul, ol, li {
 	list-style: none;
 }

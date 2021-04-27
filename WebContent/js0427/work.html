@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>lotto</title>
+<link rel="stylesheet" type="text/css" href="http://211.63.89.149/html_prj/common/css/main.css"/>
+<style type="text/css">
+div{border: 1px solid #333; width:220px;height:50px;margin: 40px auto;}
+</style>
+<script type="text/javascript">
+	var lotto= new Array();
+	var num=0;
+	for(var j=0;j<5;j++){
+		for (var i = 0; i < 6; i++) {
+			num=(Math.random()*45+1);
+			lotto[i]=parseInt(num);
+		}//for
+		
+		document.write("<div>");
+			for (var i = 0; i < 6; i++) {
+				document.write("<img src='lotto/ball_");
+				document.write(lotto[i]);
+				document.write(".png'/>");
+			}//for
+		document.write("</div>");
+	}//for
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
