@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>work</title>
+<link rel="stylesheet" type="text/css" href="http://211.63.89.149/html_prj/common/css/main.css"/>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+function getValue() {
+	var obj=window.document.frm;
+	var name=obj.name.value;
+	var ssn=obj.ssn.value;
+	var year=1900+parseInt(ssn.substring(0,2));
+	var month=ssn.substring(2,4);
+	var day=ssn.substring(4,6);
+	
+	var date=new Date();
+	var age=date.getFullYear()-year;
+	 if(ssn.length!==14){
+ 		alert("주민번호는 14자리");	 
+	 }else{
+	if(ssn.charAt(6)!=='-'){
+		alert("'-'이 없습니다.");
+	}else{
+		 alert("생년월일:"+year+"-"+month+"-"+day+"\n" +"나이: "+age+"\n"
+				+"성별:"+gender()+"\n"+"외국인여부:"+foreigner()
+				+"\n"+"띠:"+zodiac()+"띠\n");
+		 }//ifelse
+	 }//ifelse	 
+ }//getValue
+		 
+
+ function gender() {
+	 var obj=window.document.frm;
+	 var ssn=obj.ssn.value;
+	 var gender="";
+	 
+	 if(ssn.charAt(7)==1||ssn.charAt(7)==3||ssn.charAt(7)==5||ssn.charAt(7)==7){
+		 gender="남자";
+	 }else if(ssn.charAt(7)==2||ssn.charAt(7)==4||ssn.charAt(7)==6||ssn.charAt(7)==8){
+		 gender="여자";
+	 }//else
+	 return gender;
+}//gender
+ 
+ 
+ function foreigner() {
+	 var obj=window.document.frm;
+	 var ssn=obj.ssn.value;
+	 var foreigner="";
+	 
+	 if(ssn.charAt(7)==1||ssn.charAt(7)==2||ssn.charAt(7)==3||ssn.charAt(7)==4){
+		 foreigner="내국인";
+	 }else if(ssn.charAt(7)==5||ssn.charAt(7)==6||ssn.charAt(7)==7||ssn.charAt(7)==8){
+		 foreigner="외국인";
+	 }//else
+	 return foreigner;	
+}//foreigner
+ 
+ 
+function zodiac() {
+	 var obj=window.document.frm;
+	 var ssn=obj.ssn.value;
+	 var year=1900+parseInt(ssn.substring(0,2));
+	 var zodiac="";
+	 
+	 switch (year%12) {
+	case 0:zodiac="원숭이"; break;
+	case 1:zodiac="닭"; break;
+	case 2:zodiac="개";break;
+	case 3:zodiac="돼지";break;
+	case 4:zodiac="쥐";break;
+	case 5:zodiac="소";break;
+	case 6:zodiac="호랑이";break;
+	case 7:zodiac="토끼";break;
+	case 8:zodiac="용";break;
+	case 9:zodiac="뱀";break;
+	case 10:zodiac="말";break;
+	case 11:zodiac="양";break;
+	}//switch
+	 return zodiac;
+
+}//zodiac
+
+
+</script>
+</head>
+<body>
+<form action="#" name="frm">
+<table>
+<tr>
+<th>이름</th>
+<td><input type="text" id="name" class="inputBox"></td>
+<th rowspan="2">
+	<input type="button" value="입력" class="btn" onclick="getValue()">
+</th>
+</tr>
+<tr>
+<th>주민번호</th>
+<td><input type="password" id="ssn" class="inputBox"> </td>
+</tr>
+
+</table>
+</form>
+</body>
+</html>

@@ -10,10 +10,10 @@ div{border: 1px solid #333; width:220px;height:50px;margin: 40px auto;}
 <script type="text/javascript">
 	var lotto= new Array();
 	var num=0;
-	for(var j=0;j<5;j++){
-		for (var i = 0; i < 6; i++) {
-			num=(Math.random()*45+1);
-			lotto[i]=parseInt(num);
+for(var j=0;j<5;j++){//5세트
+		for (var i=0; i<6;i++) {
+			num=Math.ceil(Math.random()*45+1);
+			lotto[i]=num;
 		}//for
 		
 		document.write("<div>");
@@ -23,8 +23,7 @@ div{border: 1px solid #333; width:220px;height:50px;margin: 40px auto;}
 				document.write(".png'/>");
 			}//for
 		document.write("</div>");
-	}//for
-
+}//for
 </script>
 </head>
 <body>
