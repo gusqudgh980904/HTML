@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>set_value</title>
+<link rel="stylesheet" type="text/css" href="http://211.63.89.149/html_prj/common/css/main.css"/>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+function setValue(){
+	var obj=document.frm;
+	//value 속성으로 값을 설정
+	obj.txt.value="곽범수";
+	obj.pass.value="곽범수";
+	obj.hid.value="히든태그에 값 설정";
+//	obj.file.value="c:/dev/env.bat";//file에는 값을 설정할 수 없다
+	obj.img.src="../common/images/이중구.jpg";
+	obj.ta.value="내일은 금요일\n내일은 맑습니다\n토요일 오전에는 황사비";
+}//setValue
+
+function changeStatus(){
+	var obj=document.frm;
+		//checkbox설정
+		obj.lang[0].checked=true;
+		obj.lang[3].checked=true;
+		//radio
+		obj.gender[0].checked=true;
+		//select
+		obj.company[3].selected=true;
+		
+		
+}//changeStatus
+
+function allcheck(){
+	var obj=document.frm1;
+	for(var i=0;i<obj.content.legth;i++){
+		obj.content[i].checked=obj.flag.checked;
+	}//for
+/* 	if(obj.flag.checked=true){
+		for(var i=0;i<obj.content.length;i++){
+		obj.content[i].checked=true;
+		}//for
+		
+	}else if(obj.flag.checked=false){
+		for(var i=0;i<obj.content.length;i++){
+			obj.content[i].checked=false;
+			}//for
+	}//else if */
+}//allcheck
+
+
+
+</script>
+</head>
+<body>
+
+<div>
+<form action="#" name="frm">
+
+	<strong>값변경</strong>
+	<div>
+	<label>text</label><input type="text"name="txt"class="inputBox"><br/>
+	<label>password</label><input type="password"name="pass"class="inputBox"><br/>
+	<label>hidden</label><input type="hidden"name="hid"class="inputBox"><br/>
+	<label>file</label><input type="file"name="file"><br/>
+	<img src="../common/images/톰하디.jpg" name="img"><br/>
+	<label>textarea</label>
+	<textarea name="ta" class="inputBox" style="width:300px;height:300px;">안녕하세요</textarea>
+	<br/>	
+	<input type="button"value="값설정"class="btn"onclick="setValue()"/>
+	</div>
+	
+	<strong>상태변경</strong>
+	<div>
+	<label>언어선택</label>
+	<input type="checkbox" name="lang" value="Java">Java
+	<input type="checkbox" name="lang" value="C/c++">C/C++
+	<input type="checkbox" name="lang" value="VB">VisualBasic
+	<input type="checkbox" name="lang" value="Python">Python
+	<br/>
+	<input type="radio" name="gender"value="남자"/>남자
+	<input type="radio" name="gender"value="여자"/>여자
+	<br/>
+	<select name="company">
+		<option>----선택----</option>
+		<option value="SKT">SKT</option>
+		<option value="KTF">KTF</option>
+		<option value="LG">LG</option>
+	</select>
+	<br/>
+	<input type="button" value="설정" class="btn" onclick="changeStatus()"/>
+	
+	</div>
+
+</form>
+</div>
+
+<div>
+<form action="#" name="frm1" onclick="allcheck()">
+<input type="checkbox" name="flag"/><br/>
+<input type="checkbox" name="content"/>오늘은 월요일<br/>
+<input type="checkbox" name="content"/>오늘은 화요일<br/>
+<input type="checkbox" name="content"/>오늘은 수요일<br/>
+<input type="checkbox" name="content"/>오늘은 목요일<br/>
+<input type="checkbox" name="content"/>오늘은 금요일<br/>
+<input type="checkbox" name="content"/>오늘은 토요일<br/>
+<input type="checkbox" name="content"/>오늘은 일요일<br/>
+
+
+</form>
+</div>
+
+</body>
+</html>
