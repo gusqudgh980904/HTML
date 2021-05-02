@@ -21,20 +21,10 @@
 	/* #footer끝 */
 </style>
 <script type="text/javascript">
-window.onload=function(){
-document.getElementById("p1").addEventListener("keydown",enterKey);
-document.getElementById("p2").addEventListener("keydown",enterKey);
-document.getElementById("btn").addEventListener("click",setID);
-}//function
 
 window.onload=function(){
 	setDice();
 }
-
-function setID(){
-	
-}
-
 
 function setDice(){
 	var dice1=parseInt(Math.random()*6)+1;
@@ -46,6 +36,56 @@ function setDice(){
 	img1.src="images/dice_"+dice1+".png";
 	img2.src="images/dice_"+dice2+".png";
 }//setDice
+
+
+function setId() {
+	var obj=document.diceFrm;
+	var id1 =obj.p1.value;
+	var id2 =obj.p2.value;
+	
+	if(obj.p1.value==""){
+		alert("이름은 필수 입력");
+		obj.p1.focus();
+		return;
+	}//if	
+	if(obj.p2.value==""){
+		alert("이름은 필수 입력");
+		obj.p2.focus();
+		return;
+	}//if
+	
+    document.getElementById("p1Name").innerHTML =id1;
+    document.getElementById("p2Name").innerHTML =id2;
+    
+    alert("이름입력완료");
+	
+}//setName
+
+
+function playDice(){
+	var obj=document.diceFrm;
+	var flag=false;
+	var player1= obj.p1.value;
+	var player2= obj.p2.value;
+	
+ 	if (obj.turn[0].checked==true) {
+	setDice();
+	
+	score1 = parseInt(obj.dice1.src.substr(obj.dice1.src.indexOf("dice_")+5,1))
+	+ parseInt(obj.dice2.src.substr(obj.dice2.src.indexOf("dice_")+5,1));
+	alert(player1+" 주사위 던지기\n"+"현재 점수:"+score1);
+	obj.turn[1].checked="checked";
+	}//end if 
+	
+ 	if (obj.turn[1].checked==true) {
+	setDice();
+	score2= parseInt(obj.dice1.src.substr(obj.dice1.src.indexOf("dice_")+5,1))
+	+ parseInt(obj.dice2.src.substr(obj.dice2.src.indexOf("dice_")+5,1));
+	alert(player2+" 주사위 던지기\n"+"현재 점수:"+score2);
+	}//end if
+}//playDice
+
+
 
 </script>
 </head>
@@ -67,12 +107,12 @@ function setDice(){
 		<input type="text" name="p1" id="p1" class="inputBox">
 		<label>이름2</label>
 		<input type="text" name="p2" id="p2" class="inputBox">
-		<input type="button"id="btn" value="입력" class="btn">
+		<input type="button" value="입력" class="btn" onclick="setId()">
 		</div>
 		<div id="turnDiv" style="margin-bottom:20px">
 		<input type="radio" name="turn" value="p1" checked="checked"/><span id="p1Name"></span>
 		<input type="radio" name="turn" value="p2"/><span id="p2Name"></span>
-		<input type="button" value="던지기"class="btn"/>
+		<input type="button" value="던지기"class="btn" onclick="playDice()"/>
 		<input type="button" value="게임초기화"class="btn"/>
 		</div>
 		
