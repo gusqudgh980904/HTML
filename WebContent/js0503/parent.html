@@ -22,7 +22,12 @@
 </style>
 <script type="text/javascript">
 function popup(){
-	window.open("id_dup.html","id_pop","width=512,height=313");
+	//부모창의 값을 자식창으로 넘겨 주기
+	//1.자식창을 변수에 저장한다
+	var subWin=window.open("id_dup.html","id_pop","width=512,height=313");
+	//자식창의 Form Control에 값 전달
+	var pid=document.frm.id.value;//부모창의 아이디
+	subWin.window.document.idFrm.id.value=pid;
 }//popup
 
 </script>
@@ -40,7 +45,8 @@ function popup(){
 	</div>
 	<div id="container">
 	<form action="" name="frm">
-		<label>아이디</label><input type="text" name="id" readonly="readonly" class="inputBox"/>
+		<label>아이디(부모창에 입력된 값을 자식창으로 보내기)</label>
+		<input type="text" name="id" class="inputBox"/>
 		<input type="button"  value="중복확인" class="btn" style="height:32px" onclick="popup()"/>
 	</form>
 	</div>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>closure</title>
+<link rel="stylesheet" type="text/css" href="http://211.63.89.149/html_prj/common/css/main.css"/>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+/*
+//클로저가 필요한 이유
+function test(){
+	var msg="오늘은 월요일입니다.";
+	
+	function inFunc(){
+		alert("중첩정의한 함수");
+	}//inFunc
+	alert("test호출:"+msg);
+}//test
+
+test();
+
+//함수안의 변수(지역변수)를 외부에서 호출(함수안의 변수와 함수는 전역이 아닌 이상 호출 불가능)
+alert(test.msg);
+*/
+
+//()를 사용한 클로져
+var clo=({
+		name:"한상민",
+		addr:function(){
+			return "서울시 강남구 역삼동";
+		},
+		age:function(year){
+			var date=new Date();
+			return date.getFullYear()-year+1;
+		}
+	});
+//2.사용:함수기호 ()를 사용하지 않고 함수를 호출하면 함수의 내용이 문자열로 반환된다
+				//(함수에 정해진 일을 수행하지 못함)
+alert(clo.name+"/"+clo.addr()+"/"+clo.age(1998));
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

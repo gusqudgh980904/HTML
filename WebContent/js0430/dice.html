@@ -83,8 +83,13 @@ function playDice(){
 	+ parseInt(obj.dice2.src.substr(obj.dice2.src.indexOf("dice_")+5,1));
 	alert(player2+" 주사위 던지기\n"+"현재 점수:"+score2);
 	}//end if
+	
 }//playDice
 
+
+function reset(){
+	
+}//reset
 
 
 </script>
@@ -113,7 +118,7 @@ function playDice(){
 		<input type="radio" name="turn" value="p1" checked="checked"/><span id="p1Name"></span>
 		<input type="radio" name="turn" value="p2"/><span id="p2Name"></span>
 		<input type="button" value="던지기"class="btn" onclick="playDice()"/>
-		<input type="button" value="게임초기화"class="btn"/>
+		<input type="button" value="게임초기화"class="btn" onclick="reset()"/>
 		</div>
 		
 		<div id="diceDiv">
