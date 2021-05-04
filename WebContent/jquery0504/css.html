@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>insert title here</title>
+<link rel="stylesheet" type="text/css" href="http://211.63.89.149/html_prj/common/css/main.css"/>
+<style type="text/css">
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	var height=$("#c").css("height");
+	
+	$("#output").html("높이:<strong>"+height+"</strong>");
+});//ready
+
+</script>
+</head>
+<body>
+<div id="a" style="height:250px;">div a</div><br/>
+<div id="b" style="height:50px;">div b</div><br/>
+<input type="text" id="c" class="inputBox"/><br/>
+
+<div id="output"></div><br/>
+</body>
+</html>
