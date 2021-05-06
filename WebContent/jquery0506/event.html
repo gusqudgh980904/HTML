@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>event</title>
+<link rel="stylesheet" type="text/css" href="http://211.63.89.149/html_prj/common/css/main.css"/>
+<style type="text/css">
+img{border:1px solid #333}
+</style>
+<!-- jQuery CDN(Contents Delivery Network -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	//클릭이벤트
+	$("#clickEvt").click(function() {
+		alert("클릭이벤트");
+	});//clickEvt
+	
+	//커서가 빠져나가면:blur
+	//$("#f_o").blur(function(){
+	$("#f_o").focusout(function() {
+		alert("커서나감");
+	});//f_o
+	
+	//커서가 들어오면
+	$("#f_i").focusin(function() {
+		alert("커서들어옴");
+	});//f_i
+	
+	//키가 눌리면
+//	$("#k_d").keypress(function(evt) {
+	$("#k_d").keydown(function(evt) {
+		var kdVal=document.frm.kd.value;		
+		alert("키눌림"+evt.which+"입력글자수:"+kdVal.length);
+	});//k_d
+	
+	//키가 올라오면
+	$("#k_u").keyup(function() {
+		alert("키올라옴");
+	});//k_u
+	
+	//select에서 다른 option이 선택될 때
+	$("#chg").change(function() {
+		alert("다른 option선택");
+	});//k_u
+	
+	//마우스 포인터가 올라올 때
+//	$("#m_u").mouseover(function() {
+	$("#m_u").mouseenter(function() {
+		alert("마우스 올라옴");
+	})//m_u
+	
+	//마우스 포인터가 빠져나갈 때
+	$("#m_o").mouseout(function() {
+		alert("마우스 나가면");
+	})//m_o
+	
+});//ready
+
+</script>
+</head>
+<body>
+<div>
+<strong>event</strong>
+<br/>
+<form name="frm">
+<input type="button"value="클릭"class="btn" id="clickEvt"/><br/>
+<input type="text" value="커서가 빠져나가면 "id="f_o"/><br/>
+<input type="text" value="커서가 들어오면 "id="f_i"/><br/>
+<label>키눌림</label><input type="text"id="k_d" name="kd"/><br/>
+<label>키올라옴</label><input type="text"id="k_u"/><br/>
+<select id="chg">
+<option>A</option>
+<option>B</option>
+</select><br/>
+<label>마우스포인터가 올라오면</label><img src="../common/images/톰하디.jpg" id="m_u"/><br/>
+<label>마우스포인터가 빠져나가면</label><img src="../common/images/톰하디.jpg" id="m_o"/><br/>
+
+</form>
+</div>
+</body>
+</html>
