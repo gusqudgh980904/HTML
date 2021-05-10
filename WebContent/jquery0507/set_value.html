@@ -31,8 +31,12 @@ $(function(){
 		//radio
 		$("#m").prop("checked",true);
 		
-		//selct
-		$("#ktf").prop("selected",true);
+		//select
+//		$("#ktf").prop("selected",true);
+		
+		//select find()함수 사용
+		$("#company").find("option:eq(3)").prop("selected",true);
+		
 		
 		
 	});//click	
@@ -70,7 +74,7 @@ $(function(){
 	<input type="radio" name="gender"value="남자"id="m"/>남자
 	<input type="radio" name="gender"value="여자"id="g"/>여자
 	<br/>
-	<select name="company">
+	<select name="company" id="company">
 		<option>----선택----</option>
 		<option value="SKT"id="skt">SKT</option>
 		<option value="KTF"id="ktf">KTF</option>
